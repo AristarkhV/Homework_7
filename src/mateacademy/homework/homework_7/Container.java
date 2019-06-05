@@ -6,15 +6,13 @@ public class Container<T, K> {
 
     private T[] key;
     private K[] value;
-    private int size;
+    private int sizeKey;
     private K invalidValue = null;
 
     public Container(T[] key, K[] value, int size) {
-        for (int i = 0; i < this.getSize(); i++) {
-            this.key[i] = key[i];
-            this.value[i] = value[i];
-        }
-        size = this.size;
+            this.key = key;
+            this.value = value;
+            this.sizeKey = size;
     }
 
     public K getValue(T key) {
@@ -35,6 +33,6 @@ public class Container<T, K> {
     }
 
     private int getSize() {
-        return size;
+        return sizeKey;
     }
 }
