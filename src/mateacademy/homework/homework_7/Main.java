@@ -18,7 +18,7 @@ public class Main {
         Integer[] keys = {1, 2, 3};
         int size = keys.length;
         Container<Integer, String> storage = new Container(keys, stringValue, size);
-
-        System.out.println(storage.getValue(1));
+        storage.setValue("...", 2);
+        System.out.println(storage.getValue(2));
     }
 }

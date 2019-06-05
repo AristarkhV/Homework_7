@@ -10,9 +10,9 @@ public class Container<T, K> {
     private K invalidValue = null;
 
     public Container(T[] key, K[] value, int size) {
-            this.key = key;
-            this.value = value;
             this.sizeKey = size;
+            this.key = Arrays.copyOf(key, size);
+            this.value = Arrays.copyOf(value, size);
     }
 
     public K getValue(T key) {
