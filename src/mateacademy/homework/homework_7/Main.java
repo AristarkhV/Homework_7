@@ -14,11 +14,14 @@ public class Main {
         boolean mustBeTrue = pair.equals(pair2); // true!
         boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!
 
-        String[] stringValue = {"one", "two", "three"};
-        Integer[] keys = {1, 2, 3};
-        int size = keys.length;
-        Container<Integer, String> storage = new Container(keys, stringValue, size);
-        storage.setValue("...", 2);
-        System.out.println(storage.getValue(2));
+        Container<String, String> storage = new Container();
+        storage.putValue("one", "box1");
+        System.out.println(storage.getValue("box1"));
+        storage.putValue("four", "box4");
+        System.out.println(storage.getValue("box4"));
+        storage.putValue("two", "box2");
+        System.out.println(storage.getValue("box2"));
+        storage.putValue("...", "box2");
+        System.out.println(storage.getValue("box2"));
     }
 }
